@@ -1,0 +1,9 @@
+[module/spotify]
+type = custom/script
+exec = /home/empty/.config/scripts/spotify/launch.sh
+interval = 2
+click-left = spotify
+
+
+[bar/bar1]
+modules-left = spotify
