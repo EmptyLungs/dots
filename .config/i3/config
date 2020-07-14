@@ -16,7 +16,7 @@ set $mod Mod4
 #
 #
 font pango:monospace Bold 10
-#font HackNerdFont,FontAwesome 11
+#font HackNerdFont,FontAwesome 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -95,27 +95,16 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $ws1 "  1      "
-set $ws2 "  2      "
-set $ws3 "  3      "
-set $ws4 "  4      "
-set $ws5 "  5      "
-set $ws6 "  6      "
-set $ws7 "    7    "
-set $ws8 "    8    "
-set $ws9 "    9    "
-set $ws10 "    10    "
-
-#set $ws1 "1:a"
-#set $ws2 "2:b"
-#set $ws3 "3:c"
-#set $ws4 "4:d"
-#set $ws5 "5:e"
-#set $ws6 "6:f"
-#set $ws7 "7:g"
-#set $ws8 "8:h"
-#set $ws9 "9:j"
-#set $ws10 "10:k"
+set $ws1 "  1     "
+set $ws2 "  2  阮  "
+set $ws3 "  3     "
+set $ws4 "  4     "
+set $ws5 "  5     "
+set $ws6 "  6  ﭮ   "
+set $ws7 "  7     "
+set $ws8 "  8     "
+set $ws9 "  9     "
+set $ws10 "  10    "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -179,7 +168,7 @@ bindsym $mod+r mode "resize"
 bar {
         position top
         status_command i3status
-	font pango:Monospace bold, Icons 11
+	font pango:HackNerdFont,FontAwesome 11
 }
 
 exec --no-startup-id nitrogen --restore
