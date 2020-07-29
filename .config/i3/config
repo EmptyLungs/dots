@@ -149,5 +149,5 @@ gaps inner 10
 
 
 bindsym Control+space exec rofi -modi drun -show drun
-bindsym $mod+Tab exec /home/empty/.config/scripts/lock.sh
+bindsym $mod+Tab exec /usr/bin/i3lock-fancy-dualmonitor
 bindsym $mod+q exec scrot -s
