@@ -136,9 +136,7 @@ exec --no-startup-id feh --bg-fill --no-xinerma ~/.config/wall/industrial.png
 for_window [class="^.*"] border pixel 1
 for_window [class="rofi"] border none
 
-# exec_always compton -f -c -I 0.1 -O 0.1 -o 0.3 --inactive-dim 0.2
-# exec_always compton --config /home/empty/projects/dots/.config/compton/config
-
+exec_always compton -f -c -I 0.1 -O 0.1 -o 0.8 --inactive-dim 0.15 --focus-exclude "class_g = 'Google-chrome'"
 
 exec "setxkbmap -layout us,ru"
 exec "setxkbmap -option 'grp:alt_shift_toggle'"
