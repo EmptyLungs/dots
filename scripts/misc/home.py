@@ -16,7 +16,7 @@ if __name__ == '__main__':
     arrival_date = now.replace(hour=arrival_hrs, minute=arrival_mins)
     dippin_time = arrival_date + work_day
     print("Home: {}".format(dippin_time.strftime('%H:%M')))
-    worked = now - arrival_date
+    worked = now - arrival_date - timedelta(minutes=30)
     worked_hrs = worked.seconds // 3600
     worked_mins = (worked.seconds // 60) % 60
     print("Worked: {}h {}m".format(worked_hrs, worked_mins))
