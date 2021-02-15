@@ -142,6 +142,8 @@ exec "setxkbmap -option 'grp:alt_shift_toggle'"
 
 exec_always --no-startup-id xxkb                                                                                                                                                                                
 exec_always --no-startup-id setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle"
+exec_always --no-startup-id picom --inactive-dim 0.15
+
 
 gaps outer 5
 gaps inner 10
