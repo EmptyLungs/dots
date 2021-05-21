@@ -6,7 +6,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+j focus left
@@ -128,30 +128,27 @@ bindsym $mod+r mode "resize"
 
 bar {
 	i3bar_command $HOME/.config/polybar/launch.sh
+	#position top
+        #status_command i3status
+	#font pango:HackNerdFont 12
 }
 
-exec --no-startup-id feh --bg-fill --no-xinerama ~/.config/wall/industrial.jpg
+exec --no-startup-id feh --no-xinerama --bg-fill ~/.config/wall/123.jpg
 for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border none
 for_window [class="rofi"] border none
 
-#exec_always compton -f -O 0.07 -I 0.07 -D 11 --inactive-dim 0.15 --focus-exclude "class_g = 'Google-chrome'"
-exec_always compton -f --config ~/.config/compton/config
+exec setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" "ctrl:nocaps"
+#exec xinput set-prop 13 307 1
 
-exec "setxkbmap -layout us,ru"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
-
-exec_always --no-startup-id xxkb                                                                                                                                                                                
-exec_always --no-startup-id setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle"
-exec_always --no-startup-id picom --inactive-dim 0.15
-
-
+# exec_always --no-startup-id picom --inactive-dim 0.1
+exec_always --no-startup-id picom
 gaps outer 5
 gaps inner 10
 
 
 bindsym Control+space exec rofi -modi drun -show drun
-bindsym $mod+Tab exec /usr/bin/i3lock-fancy-dualmonitor
-bindsym $mod+q exec scrot -s
-
+bindsym $mod+Tab exec /usr/bin/i3lock-fancy
+#bindsym $mod+q exec scrot -s
 workspace_auto_back_and_forth yes
 
