@@ -141,8 +141,7 @@ for_window [class="rofi"] border none
 exec setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" "ctrl:nocaps"
 #exec xinput set-prop 13 307 1
 
-# exec_always --no-startup-id picom --inactive-dim 0.1
-exec_always --no-startup-id picom
+exec_always --no-startup-id picom --config /dev/nul
 gaps outer 5
 gaps inner 10
 
