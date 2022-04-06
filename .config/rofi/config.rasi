@@ -1,4 +1,4 @@
- 
+
 /*
  * ROFI One Dark
  *
@@ -8,7 +8,6 @@
  * User: me-benni
  *
  */
-
 
 * {
   black:      #000000;
@@ -23,14 +22,15 @@
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
   bg:         #282c34;
+  orange:     #dea035;
 
   spacing: 0;
   background-color: transparent;
 
-  font: "Knack Nerd Font 14";
+  font: "Knack Nerd Font 23";
   text-color: @text;
+  border: 0px;
 }
-
 window {
   transparency: "real";
   fullscreen: true;
@@ -47,17 +47,18 @@ inputbar {
 }
 
 prompt {
-  text-color: @blue;
+  text-color: @red;
 }
 
 textbox-prompt-colon {
   expand: false;
-  str: ":";
-  text-color: @text-alt;
+  str: "   >";
+  text-color: @orange;
 }
 
 entry {
   margin: 0px 10px;
+  text-color: @orange;
 }
 
 listview {
@@ -69,7 +70,7 @@ listview {
 element {
   padding: 5px;
   text-color: @text-alt;
-  highlight: bold #95ee8f; /* green */
+  highlight: bold #dea035; /* green */
   border-radius: 3px;
 }
 
@@ -98,4 +99,14 @@ button selected {
   padding: 5px;
   border-radius: 3px;
   background-color: @emphasis;
+}
+
+
+element.normal.normal {
+    background-color: transparent;
+    text-color:       inherit;
+}
+element.alternate.normal {
+    background-color: transparent;
+    text-color:       inherit;
 }
