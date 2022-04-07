@@ -1,12 +1,15 @@
 set $mod Mod4
 
-font pango:monospace Bold 10
+font pango:monospace Bold 9
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #005b73 #003847 #ffffff #800909   #1f4b66
 
 # change focus
 bindsym $mod+j focus left
@@ -133,15 +136,17 @@ bar {
 	#font pango:HackNerdFont 12
 }
 
-exec --no-startup-id feh --no-xinerama --bg-fill ~/.config/wall/123.jpg
+exec --no-startup-id feh --bg-fill ~/.config/wallpaper/keyboard.jpg --bg-fill ~/.config/wallpaper/keyboard.jpg
 for_window [class="^.*"] border pixel 1
-for_window [class="^.*"] border none
+#for_window [class="^.*"] border none
 for_window [class="rofi"] border none
+for_window [class="google-chrome"] border none
+for_window [class="Spotify"] border pixel 0
 
 exec setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" "ctrl:nocaps"
-#exec xinput set-prop 13 307 1
+exec ~/.config/scripts/docker_notif.sh
 
-exec_always --no-startup-id picom --config /dev/nul
+exec_always --no-startup-id picom --config /dev/null
 gaps outer 5
 gaps inner 10
 
